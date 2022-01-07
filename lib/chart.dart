@@ -24,7 +24,7 @@ class FinanceChart extends StatelessWidget {
                   getTextStyles: (context, value) => TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.bold,
-                      fontSize: 12.sp),
+                      fontSize: 20.sm),
                   getTitles: (double value) {
                     switch (value.toInt()) {
                       case 0:

@@ -18,7 +18,7 @@ class CardsPage extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 splashColor: Colors.transparent,
                 hoverColor: Colors.transparent,
-                onPressed: () => Navigator.pop(context),
+                onPressed: () {},
                 icon: const Icon(
                   Ionicons.ellipsis_vertical,
                   color: Colors.black,
@@ -45,14 +45,14 @@ class CardsPage extends StatelessWidget {
               'Your Cards',
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 24.sp,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
               'You Have 3 Active Card',
               style: TextStyle(
                   color: Colors.black54,
-                  fontSize: 16.sp,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.bold),
             ),
             trailing: FloatingActionButton(
@@ -69,10 +69,10 @@ class CardsPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(vertical: 0.02.sh),
             padding: EdgeInsets.all(12.sm),
+            height: 220.sm,
             decoration: BoxDecoration(
                 color: const Color(0xFF855CAD),
                 borderRadius: BorderRadius.circular(16.r)),
-            height: 220.sm,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -83,19 +83,19 @@ class CardsPage extends StatelessWidget {
                     Icon(
                       Ionicons.card_outline,
                       color: Colors.white,
-                      size: 36.sm,
+                      size: 40.sm,
                     ),
                     Text(
                       '4562 1122 4595 7852',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 22.sp),
+                          fontSize: 20.sp),
                     ),
                     Text(
                       'Nikita',
                       style: TextStyle(
-                          fontSize: 16.sp,
+                          fontSize: 14.sp,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -105,7 +105,7 @@ class CardsPage extends StatelessWidget {
                         Text(
                           'Expiry Date',
                           style: TextStyle(
-                              color: Colors.grey.shade200, fontSize: 16.sp),
+                              color: Colors.grey.shade200, fontSize: 14.sp),
                         ),
                         SizedBox(
                           height: 0.005.sh,
@@ -142,9 +142,12 @@ class CardsPage extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            'Recent Transactions',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.sp),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 0.01.sh),
+            child: Text(
+              'Recent Transactions',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
+            ),
           ),
           ListTile(
             leading: const Icon(

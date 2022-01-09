@@ -9,7 +9,7 @@ class FinanceChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 0.03.sh),
-      height: 0.32.sh,
+      height: 250.sm,
       child: BarChart(BarChartData(
           alignment: BarChartAlignment.spaceAround,
           maxY: 10000,
@@ -24,7 +24,7 @@ class FinanceChart extends StatelessWidget {
                   getTextStyles: (context, value) => TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18.sm),
+                      fontSize: 14.sp),
                   getTitles: (double value) {
                     switch (value.toInt()) {
                       case 0:

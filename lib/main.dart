@@ -1,5 +1,6 @@
 import 'package:finance_app/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main(List<String> args) {
@@ -11,8 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return ScreenUtilInit(
-      minTextAdapt: true,
       builder: () => const MaterialApp(
         title: 'Finance App',
         debugShowCheckedModeBanner: false,

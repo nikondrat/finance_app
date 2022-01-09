@@ -1,4 +1,6 @@
+import 'package:finance_app/cards.dart';
 import 'package:finance_app/chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ionicons/ionicons.dart';
@@ -9,49 +11,89 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          actions: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.sm),
+              child: const CircleAvatar(
+                backgroundColor: Colors.amberAccent,
+              ),
+            )
+          ],
+          leading: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.sm),
+            child: IconButton(
+                hoverColor: Colors.transparent,
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.black,
+                )),
+          )),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 32),
+        padding: EdgeInsets.symmetric(horizontal: 20.sm),
         children: [
           Text(
             'Your Balance',
-            style: TextStyle(fontSize: 28.sm, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'June 14, 2022',
-                  style: TextStyle(fontSize: 18.sm),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            padding: EdgeInsets.symmetric(vertical: 0.02.sh),
+            child: InkWell(
+              onTap: () => Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const CardsPage(),
+                  )),
+              highlightColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 0.04.sw, vertical: 0.02.sh),
+                decoration: BoxDecoration(
+                    color: Colors.amberAccent,
+                    borderRadius: BorderRadius.circular(12.r)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '\$27,802.05',
-                      style: TextStyle(
-                          fontSize: 40.sm, fontWeight: FontWeight.bold),
+                      'June 14, 2022',
+                      style: TextStyle(fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      height: 0.01.sh,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '15%',
-                          style: TextStyle(fontSize: 24.sm),
+                          '\$27,802.05',
+                          style: TextStyle(
+                              fontSize: 30.sp, fontWeight: FontWeight.bold),
                         ),
-                        Icon(
-                          Ionicons.arrow_up,
-                          size: 32.sm,
-                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '15%',
+                              style: TextStyle(fontSize: 24.sm),
+                            ),
+                            Icon(
+                              Ionicons.arrow_up,
+                              size: 32.sm,
+                            ),
+                          ],
+                        )
                       ],
                     )
                   ],
-                )
-              ],
+                ),
+              ),
             ),
           ),
           Row(
@@ -72,7 +114,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Sent',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
                   )
                 ],
               ),
@@ -91,7 +133,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Receive',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
                   )
                 ],
               ),
@@ -110,7 +152,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Loan',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
                   )
                 ],
               ),
@@ -129,7 +171,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Topup',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
                   )
                 ],
               ),
@@ -140,7 +182,7 @@ class HomePage extends StatelessWidget {
           ),
           Text(
             'Activities',
-            style: TextStyle(fontSize: 28.sm, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
           ),
           const FinanceChart(),
         ],

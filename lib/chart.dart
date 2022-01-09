@@ -8,8 +8,8 @@ class FinanceChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 16),
-      height: 200,
+      margin: EdgeInsets.only(top: 0.03.sh),
+      height: 0.32.sh,
       child: BarChart(BarChartData(
           alignment: BarChartAlignment.spaceAround,
           maxY: 10000,
@@ -24,7 +24,7 @@ class FinanceChart extends StatelessWidget {
                   getTextStyles: (context, value) => TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20.sm),
+                      fontSize: 18.sm),
                   getTitles: (double value) {
                     switch (value.toInt()) {
                       case 0:
@@ -49,49 +49,49 @@ class FinanceChart extends StatelessWidget {
             BarChartGroupData(x: 0, barRods: [
               BarChartRodData(
                 y: 6000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 1, barRods: [
               BarChartRodData(
                 y: 9000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 2, barRods: [
               BarChartRodData(
                 y: 8000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 3, barRods: [
               BarChartRodData(
                 y: 5000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 4, barRods: [
               BarChartRodData(
                 y: 6000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 5, barRods: [
               BarChartRodData(
                 y: 4000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),
             BarChartGroupData(x: 6, barRods: [
               BarChartRodData(
                 y: 7000,
-                colors: [Colors.blueAccent],
+                colors: [const Color(0xFF855CAD)],
                 width: 10,
               ),
             ]),

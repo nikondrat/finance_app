@@ -45,14 +45,14 @@ class CardsPage extends StatelessWidget {
               'Your Cards',
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 20.sp,
+                  fontSize: 24.sm,
                   fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
               'You Have 3 Active Card',
               style: TextStyle(
                   color: Colors.black54,
-                  fontSize: 14.sp,
+                  fontSize: 16.sm,
                   fontWeight: FontWeight.bold),
             ),
             trailing: FloatingActionButton(
@@ -68,44 +68,44 @@ class CardsPage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.symmetric(vertical: 0.02.sh),
-            padding: EdgeInsets.all(12.sm),
-            height: 220.sm,
+            padding: EdgeInsets.all(14.sm),
+            height: 240.sm,
             decoration: BoxDecoration(
                 color: const Color(0xFF855CAD),
                 borderRadius: BorderRadius.circular(16.r)),
-            child: Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Icon(
+                  Ionicons.card_outline,
+                  color: Colors.white,
+                  size: 40.sm,
+                ),
+                Text(
+                  '4562 1122 4595 7852',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24.sm),
+                ),
+                Text(
+                  'Nikita',
+                  style: TextStyle(
+                      fontSize: 18.sm,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Ionicons.card_outline,
-                      color: Colors.white,
-                      size: 40.sm,
-                    ),
-                    Text(
-                      '4562 1122 4595 7852',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.sp),
-                    ),
-                    Text(
-                      'Nikita',
-                      style: TextStyle(
-                          fontSize: 14.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Expiry Date',
                           style: TextStyle(
-                              color: Colors.grey.shade200, fontSize: 14.sp),
+                              color: Colors.grey.shade200, fontSize: 16.sm),
                         ),
                         SizedBox(
                           height: 0.005.sh,
@@ -113,30 +113,33 @@ class CardsPage extends StatelessWidget {
                         Text(
                           '04/26',
                           style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 18.sm,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png',
-                      fit: BoxFit.fitWidth,
-                      isAntiAlias: true,
-                      width: 80.sm,
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Image.network(
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png',
+                          fit: BoxFit.fitWidth,
+                          isAntiAlias: true,
+                          width: 80.sm,
+                        ),
+                        SizedBox(
+                          height: 0.01.sh,
+                        ),
+                        Text(
+                          'Mastercard',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.sm),
+                        )
+                      ],
                     ),
-                    Text(
-                      'Mastercard',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.sp),
-                    )
                   ],
                 ),
               ],
@@ -146,7 +149,7 @@ class CardsPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 0.01.sh),
             child: Text(
               'Recent Transactions',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sm),
             ),
           ),
           ListTile(
@@ -157,15 +160,15 @@ class CardsPage extends StatelessWidget {
             ),
             title: Text(
               'KFC',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sm),
             ),
             subtitle: Text(
               'June 26',
-              style: TextStyle(fontSize: 14.sp, color: Colors.black54),
+              style: TextStyle(fontSize: 14.sm, color: Colors.black54),
             ),
             trailing: Text(
               '-\$12',
-              style: TextStyle(fontSize: 16.sp),
+              style: TextStyle(fontSize: 16.sm),
             ),
           ),
           ListTile(
@@ -176,15 +179,15 @@ class CardsPage extends StatelessWidget {
             ),
             title: Text(
               'PayPal',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sm),
             ),
             subtitle: Text(
               'June 28',
-              style: TextStyle(fontSize: 14.sp, color: Colors.black54),
+              style: TextStyle(fontSize: 14.sm, color: Colors.black54),
             ),
             trailing: Text(
               '+\$2400',
-              style: TextStyle(fontSize: 16.sp),
+              style: TextStyle(fontSize: 16.sm),
             ),
           ),
           ListTile(
@@ -195,15 +198,15 @@ class CardsPage extends StatelessWidget {
             ),
             title: Text(
               'Car Repair',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sm),
             ),
             subtitle: Text(
               'June 28',
-              style: TextStyle(fontSize: 14.sp, color: Colors.black54),
+              style: TextStyle(fontSize: 14.sm, color: Colors.black54),
             ),
             trailing: Text(
               '-\$230',
-              style: TextStyle(fontSize: 16.sp),
+              style: TextStyle(fontSize: 16.sm),
             ),
           ),
         ],

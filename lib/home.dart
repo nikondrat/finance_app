@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
         children: [
           Text(
             'Your Balance',
-            style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24.sm, fontWeight: FontWeight.bold),
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 0.02.sh),
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       'June 14, 2022',
-                      style: TextStyle(fontSize: 16.sp),
+                      style: TextStyle(fontSize: 16.sm),
                     ),
                     SizedBox(
                       height: 0.01.sh,
@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           '\$27,802.05',
                           style: TextStyle(
-                              fontSize: 30.sp, fontWeight: FontWeight.bold),
+                              fontSize: 30.sm, fontWeight: FontWeight.bold),
                         ),
                         Row(
                           children: [
@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Sent',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
                   )
                 ],
               ),
@@ -133,7 +133,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Receive',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
                   )
                 ],
               ),
@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Loan',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
                   )
                 ],
               ),
@@ -171,7 +171,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'Topup',
                     style:
-                        TextStyle(color: Colors.grey.shade600, fontSize: 16.sp),
+                        TextStyle(color: Colors.grey.shade600, fontSize: 18.sm),
                   )
                 ],
               ),
@@ -182,7 +182,7 @@ class HomePage extends StatelessWidget {
           ),
           Text(
             'Activities',
-            style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 24.sm, fontWeight: FontWeight.bold),
           ),
           const FinanceChart(),
         ],
